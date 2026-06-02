@@ -247,7 +247,8 @@ El patrón Builder separa la lógica de construcción de la representación del 
 	- Cartas con figuras (Sota, Caballo, Rey). 
 
  ##### Evidencia
-<img width="60%"  src="assets/07_Evidencia_Caja_Negra_Carta.png" />
+<img width="60%" src="assets/07_Evidencia_Caja_Negra_Carta.png" />
+
 #### Caja Blanca
 ##### ENFOQUE UTILIZADO  
  - **`equals()`**:
@@ -258,6 +259,7 @@ El patrón Builder separa la lógica de construcción de la representación del 
 
  ##### Evidencia
 <img width="60%" src="assets/08_Evidencia_Caja_Blanca_Carta.png" />
+
 ### Pruebas unitarias para la clase Deck.
 #### Caja Negra
 ##### ENFOQUE UTILIZADO 
@@ -267,6 +269,7 @@ El patrón Builder separa la lógica de construcción de la representación del 
 
  ##### Evidencia
 <img width="60%" src="assets/09_Evidencia_Caja_Negra_Mazo.png" />
+
 #### Caja Blanca
 ##### ENFOQUE UTILIZADO  
  - `drawCard()`: 
