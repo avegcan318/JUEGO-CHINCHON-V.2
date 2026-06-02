@@ -57,21 +57,20 @@ El flujo del juego se procesa de forma lineal, guiando al usuario mediante menú
 
 #### Menú Principal y Bienvenida
 ![Menú Principal](assets/01_Menu_Principal.png)
-
 #### Configuraciones de la partida   
-![Num-Jugador-Tip_partida](assets/02_Conf_Partida.png)
+<img width="80%"  src="assets/02_Conf_Partida.png" />
 
 #### Interfaz de Turno Humano
 ![Turno Humano](assets/03_Turno_Humano.png)
-   
+
 #### Interfaz de Turno IA 
-![Turno Humano](assets/04_Turno_IA.png)
+![Turno IA](assets/04_Turno_IA.png)
 
 #### Fase de Finalización de Ronda (Visualización de Combinaciones en Verde)
 ![Fin de Ronda](assets/05_Cierre_De_Ronda.png)
 
 #### Calculo de Puntos 
-![Calculo de puntos de la ronda](assets/06_Final_De_Ronda.png)
+<img width="80%" src="assets/06_Final_De_Ronda.png" />
 
 ---
 
@@ -123,12 +122,12 @@ El proyecto se organiza en paquetes siguiendo el principio de responsabilidad ú
 
 ### Carpeta Externa: `test/` (Pruebas Unitarias JUnit)
 
-- **[`Chinchon_Black_Box_TestCard.java`](test/Chinchon_Black_Box_TestCard.java)**: Conjunto de pruebas de **Caja Negra** para el componente `Card`. 
-- **[`Chinchon_White_Box_TestCard.java`](test/Chinchon_White_Box_TestCard.java)**: Conjunto de pruebas de **Caja Blanca** para el componente `Card`. 
-- **[`Chinchon_Black_Box_TestDeck.java`](test/Chinchon_Black_Box_TestDeck.java)**: Conjunto de pruebas de **Caja Negra** para el componente `Deck`. 
-- **[`Chinchon_White_Box_TestDeck.java`](test/Chinchon_White_Box_TestDeck.java)**: Conjunto de pruebas de **Caja Blanca** para el componente `Deck`. 
-- **[`Chinchon_Black_Box_TestPlayer.java`](test/Chinchon_Black_Box_TestPlayer.java)**: Conjunto de pruebas de **Caja Negra** para la jerarquía `Player`. 
-- **[`Chinchon_White_Box_TestPlayer.java`](test/Chinchon_White_Box_TestPlayer.java)**: Conjunto de pruebas de **Caja Blanca** para la jerarquía `Player`. 
+- **[`Chinchon_Black_Box_TestCard.java`](test/chichon/test/Chinchon_Black_Box_TestCard.java)**: Conjunto de pruebas de **Caja Negra** para el componente `Card`. 
+- **[`Chinchon_White_Box_TestCard.java`](test/chichon/test/Chinchon_White_Box_TestCard.java)**: Conjunto de pruebas de **Caja Blanca** para el componente `Card`. 
+- **[`Chinchon_Black_Box_TestDeck.java`](test/chichon/test/Chichon_Black_Box_TestDeck.java)**: Conjunto de pruebas de **Caja Negra** para el componente `Deck`. 
+- **[`Chinchon_White_Box_TestDeck.java`](test/chichon/test/Chichon_White_Box_TestDeck.java)**: Conjunto de pruebas de **Caja Blanca** para el componente `Deck`. 
+- **[`Chinchon_Black_Box_TestPlayer.java`](test/chichon/test/Chinchon_Black_Box_TestCard.java)**: Conjunto de pruebas de **Caja Negra** para la jerarquía `Player`. 
+- **[`Chinchon_White_Box_TestPlayer.java`](test/chichon/test/Chinchon_White_Box_TestPlayer.java)**: Conjunto de pruebas de **Caja Blanca** para la jerarquía `Player`. 
 
 ---
 
@@ -182,7 +181,7 @@ public static ConsoleInput getInstance() {
 > Es decir, se utiliza para evitar múltiples instancias del `Scanner` y conflictos de buffer.
 
 ### 2. Patrón Builder
-Se aplica en la clase [`Game.java`](src/chinchon/app/Game.java).
+Se aplica en la clase [`Game.java`](src/chinchon/dominio/Game.java).
 
 **Código:**
 ```
@@ -248,8 +247,7 @@ El patrón Builder separa la lógica de construcción de la representación del 
 	- Cartas con figuras (Sota, Caballo, Rey). 
 
  ##### Evidencia
- ![Foto caja negra de card](assets/07_Evidencia_Caja_Negra_Carta)
-
+<img width="60%"  src="assets/07_Evidencia_Caja_Negra_Carta.png" />
 #### Caja Blanca
 ##### ENFOQUE UTILIZADO  
  - **`equals()`**:
@@ -259,8 +257,7 @@ El patrón Builder separa la lógica de construcción de la representación del 
    - Su comparación con null.
 
  ##### Evidencia
- ![Foto caja blanca de card](assets/08_Evidencia_Caja_Blanca_Carta)
-
+<img width="60%" src="assets/08_Evidencia_Caja_Blanca_Carta.png" />
 ### Pruebas unitarias para la clase Deck.
 #### Caja Negra
 ##### ENFOQUE UTILIZADO 
@@ -269,8 +266,7 @@ El patrón Builder separa la lógica de construcción de la representación del 
    - Dos barajas (80 cartas)
 
  ##### Evidencia
- ![Foto caja negra de card](assets/)
-
+<img width="60%" src="assets/09_Evidencia_Caja_Negra_Mazo.png" />
 #### Caja Blanca
 ##### ENFOQUE UTILIZADO  
  - `drawCard()`: 
@@ -287,7 +283,7 @@ El patrón Builder separa la lógica de construcción de la representación del 
 	- Mazo con cartas (Devuelve `false`).
 
  ##### Evidencia
- ![Foto caja blanca de card](assets/10_Evidencia_Caja_Blanca_Mazo.png)
+ <img width="60%" src="assets/10_Evidencia_Caja_Blanca_Mazo.png" />
 
 ### Pruebas unitarias para la clase Player.
 #### Caja Negra
@@ -300,7 +296,7 @@ El patrón Builder separa la lógica de construcción de la representación del 
 *(Se usa @ParameterizedTest para cubrir todas las particiones.)*
 
  ##### Evidencia
- ![Foto caja negra de player](assets/11_Evidencia_Caja_Negra_Jugador.png)
+ <img width="60%" src="assets/11_Evidencia_Caja_Negra_Jugador.png" />
 
 #### Caja Blanca
 ##### ENFOQUE UTILIZADO  
@@ -315,7 +311,7 @@ El patrón Builder separa la lógica de construcción de la representación del 
  
 
  ##### Evidencia
- ![Foto caja blanca de player](assets/12_Evidencia_Caja_Blanca_Jugador.png)
+ <img width="60%" src="assets/12_Evidencia_Caja_Blanca_Jugador.png" />
 
 ---
 ### Javadoc
@@ -340,7 +336,6 @@ public int chooseCardToDiscard() {
 #### Clases con Implementación de Javadoc
 - **[`Main.java`](src/chinchon/app/Main.java)**
 - **[`GameManager.java`](src/chinchon/app/GameManager.java)**
-- **[`ConsoleInput.java`](src/chinchon/app/ConsoleInput.java)**
 - **[`Player.java`](src/chinchon/dominio/Player.java)**
 - **[`HumanPlayer.java`](src/chinchon/dominio/HumanPlayer.java)**
 - **[`AiPlayer.java`](src/chinchon/dominio/AiPlayer.java)**
